@@ -12,7 +12,10 @@
 	<h:body>
 		<h:form>
 		
-			First name: <h:inputText id="firstName" value="#{studentBean.firstName}" required="true" /> 
+			First name: <h:inputText id="firstName" 
+									 value="#{studentBean.firstName}" 
+									 required="true"
+									 requiredMessage="Your first name is mandatory" /> 
 			<h:message for="firstName" style="color:red"/>  
 			<br/>
 			Last name: <h:inputText id="lastName" value="#{studentBean.lastName}" />
