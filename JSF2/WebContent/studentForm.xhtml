@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+	<h:head>
+		<title>Student Registration Form</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+			First name: <h:inputText id="firstName" value="#{studentBean.firstName}" /> 
+			<h:message for="firstName" style="color: red"/>  
+			<br/>
+			Last name: <h:inputText id="lastName" value="#{studentBean.lastName}" />
+			<br/>
+			Country:
+			<h:selectOneMenu value="#{studentBean.country}">
+				<f:selectItems value="#{studentBean.countryOptions}" />				
+			</h:selectOneMenu>
+			<br/>
+			Language:
+			<h:selectOneRadio value="#{studentBean.favoriteProgrammingLanguage}">
+				<f:selectItem itemValue="Java" itemLabel="Java" />
+				<f:selectItem itemValue="C++" itemLabel="C++" />				
+			</h:selectOneRadio>
+			<br/>
+			City:
+			<h:selectManyCheckbox value="#{studentBean.city}" >
+				<f:selectItem itemValue="Bucaramanga" itemLabel="Bucaramanga" />
+				<f:selectItem itemValue="Berlin" itemLabel="Berlin" />			
+			</h:selectManyCheckbox>			
+			
+			<h:commandButton value="Submit" action="confirmationStudentForm" />			
+		</h:form>
+	</h:body>
+
+	
+
+</html>

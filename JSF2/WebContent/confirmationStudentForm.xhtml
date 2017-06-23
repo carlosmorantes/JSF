@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+	<h:head>
+		<title>Student confirmation</title>
+	</h:head>
+
+	<h:body>
+		The student confirmation OK.
+		<br/>
+		#{studentBean.firstName} #{studentBean.lastName}
+		<br/>
+		#{studentBean.country}
+		<br/>
+		Language chose: #{studentBean.favoriteProgrammingLanguage}
+		<br/>
+		City:
+		<ul>
+			<ui:repeat value="#{studentBean.city}" var="tempCity" >
+				<li>#{tempCity}</li>
+			</ui:repeat>
+		</ul>
+		
+	</h:body>
+</html>
